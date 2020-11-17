@@ -1,27 +1,33 @@
 <head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <style>
     :root {
-      --video-width: 15vw;
-      --radius: min(45vh, 45vw);
+      --video-width: 10vw;
+      --video-height: 7vw;
+      --radius: min(40vh, 40vw);
+      --number-of-videos: 9;
+      --angle-step: calc(360deg / var(--number-of-videos));
     }
 
     .center-video {
       width: var(--video-width);
-      height: 10vw;
+      height: var(--video-height);
       position: absolute;
-      left: calc(50% - (var(--video-width)/2));
-      top: calc(50% - (10vw/2));
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .circle-video {
       position: absolute;
       width: var(--video-width);
-      height: 10vw;
+      height: var(--video-height);
+      transform-origin: calc(0.5*var(--video-width)) var(--radius);
     }
 
     .circle-container {
       position: absolute;
-      border: 1px dotted grey;
       left: calc(50% - 0.5*var(--video-width));
       top: calc(50% - var(--radius));
 
@@ -29,45 +35,49 @@
       height: calc(var(--radius) * 2);
     }
 
-    .circle-container iframe:nth-of-type(1) {
-      border: 2px solid blue;
-    }
-
     .circle-container iframe:nth-of-type(2) {
-      transform: rotate(30deg);
+      transform: rotate(var(--angle-step));
     }
 
     .circle-container iframe:nth-of-type(3) {
-      transform: rotate(30deg);
+      transform: rotate(calc(2*var(--angle-step)));
     }
 
     .circle-container iframe:nth-of-type(4) {
-      transform: rotate(30deg);
+      transform: rotate(calc(3*var(--angle-step)));
     }
 
     .circle-container iframe:nth-of-type(5) {
-      transform: rotate(30deg);
+      transform: rotate(calc(4*var(--angle-step)));
     }
 
     .circle-container iframe:nth-of-type(6) {
-      transform: rotate(30deg);
+      transform: rotate(calc(5*var(--angle-step)));
     }
 
     .circle-container iframe:nth-of-type(7) {
-      transform: rotate(30deg);
+      transform: rotate(calc(6*var(--angle-step)));
     }
 
     .circle-container iframe:nth-of-type(8) {
-      transform: rotate(30deg);
+      transform: rotate(calc(7*var(--angle-step)));
     }
 
     .circle-container iframe:nth-of-type(9) {
-      transform: rotate(30deg);
+      transform: rotate(calc(8*var(--angle-step)));
+    }
+
+    .title {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      font-family: 'Roboto', sans-serif;
     }
   </style>
 </head>
 
 <body>
+  <h1 class="title">Amazing Art</h1>
   <div class="circle-container">
     <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
     <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
