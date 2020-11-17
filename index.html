@@ -1,0 +1,84 @@
+<head>
+  <style>
+    :root {
+      --video-width: 15vw;
+      --radius: min(45vh, 45vw);
+    }
+
+    .center-video {
+      width: var(--video-width);
+      height: 10vw;
+      position: absolute;
+      left: calc(50% - (var(--video-width)/2));
+      top: calc(50% - (10vw/2));
+    }
+
+    .circle-video {
+      position: absolute;
+      width: var(--video-width);
+      height: 10vw;
+    }
+
+    .circle-container {
+      position: absolute;
+      border: 1px dotted grey;
+      left: calc(50% - 0.5*var(--video-width));
+      top: calc(50% - var(--radius));
+
+      width: var(--video-width);
+      height: calc(var(--radius) * 2);
+    }
+
+    .circle-container iframe:nth-of-type(1) {
+      border: 2px solid blue;
+    }
+
+    .circle-container iframe:nth-of-type(2) {
+      transform: rotate(30deg);
+    }
+
+    .circle-container iframe:nth-of-type(3) {
+      transform: rotate(30deg);
+    }
+
+    .circle-container iframe:nth-of-type(4) {
+      transform: rotate(30deg);
+    }
+
+    .circle-container iframe:nth-of-type(5) {
+      transform: rotate(30deg);
+    }
+
+    .circle-container iframe:nth-of-type(6) {
+      transform: rotate(30deg);
+    }
+
+    .circle-container iframe:nth-of-type(7) {
+      transform: rotate(30deg);
+    }
+
+    .circle-container iframe:nth-of-type(8) {
+      transform: rotate(30deg);
+    }
+
+    .circle-container iframe:nth-of-type(9) {
+      transform: rotate(30deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle-container">
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+    <iframe class="circle-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?mute=1&controls=0"></iframe>
+  </div>
+
+  <iframe class="center-video" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&controls=0"></iframe>
+</body>
